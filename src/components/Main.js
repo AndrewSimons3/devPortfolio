@@ -6,16 +6,17 @@ const Main = () => {
 		<Container>
 			<HeroWrapper>
 				<HeroTextWrapper>
-					<Summary>Hi there 👋 I'm</Summary>
+					<p>Hi there 👋  I'm</p>
 					<Title>Andrew Simons</Title>
-					<Summary>I'm a Front End Developer</Summary>
-					<p>
+					<h3>Front End Developer  </h3>
+					<Summary>
 						I’m a professional Front End Developer with a focus in Javascript & React
 						based in Austin, TX.
-					</p>
+					</Summary>
+					<Button>Hire Me</Button>
 				</HeroTextWrapper>
 				<HeroImageWrapper>
-					<img alt='' />
+					<img src='../images/AndrewMoji.png' alt=''/>
 				</HeroImageWrapper>
 			</HeroWrapper>
 		</Container>
@@ -23,7 +24,7 @@ const Main = () => {
 };
 
 const Container = styled.div`
-	max-width: 1200px;
+	
 	width: 100%;
 `;
 
@@ -32,18 +33,60 @@ const HeroWrapper = styled.div`
 	justify-content: space-between;
 	flex-wrap: wrap;
 	align-items: center;
-	padding-bottom: 7rem;
 	position: relative;
-	margin: 20% 25px;
+	margin: 15% 5% 0 5%;
 `;
 
 const HeroTextWrapper = styled.div`
-	max-width: 40%;
+	max-width: 50%;
 	overflow: hidden;
+
+	p {
+		text-transform: uppercase;
+		margin-bottom: 1rem;
+		color: #3d405b;
+	}
+
+	h3 {
+		font-weight: 700;
+		font-size: 1.2rem;
+		line-height: 2.1rem;
+		color: #81b29a;
+		margin-bottom: 1rem;
+		text-transform: uppercase;
+	}
+`;
+
+const Summary = styled.div`
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.2rem;
+	line-height: 1.9rem;
+	color: #3d405b;
+	margin-bottom: 1rem;
+`;
+
+const Button = styled.button`
+width: 200px;
+	text-decoration: none;
+	padding: 20px;
+	border-radius: 50px;
+	border: none;
+	background-color: #81b29a;
+	color: #fff;
+	cursor: pointer;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 `;
 
 const HeroImageWrapper = styled.div`
-
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	img {
+		width: 500px;
+		height: 500px;
+		border-radius: 25px;
+	}
 `
 
 const Title = styled.h1`
@@ -55,9 +98,5 @@ const Title = styled.h1`
 	color: #3d405b;
 `;
 
-const Summary = styled.p`
-	text-transform: uppercase;
-}
-`;
 
 export default Main;

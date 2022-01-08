@@ -3,47 +3,57 @@ import styled from 'styled-components';
 
 const Header = () => {
   return (
-		<Container>
-			<Nav>
-				<h2>Andrew Simons</h2>
-				<ul>
-					<li>
-						<a href='#'>Home</a>
-					</li>
-					<li>
-						<a href='#'>About</a>
-					</li>
-					<li>
-						<a href='#'>Portfolio</a>
-					</li>
-					<li>
-						<a href='#'>Contacts</a>
-					</li>
-					<li>
-						<a href='#'>Blog</a>
-					</li>
-					<Button>Download CV</Button>
-				</ul>
-			</Nav>
-			</Container>
-	
+		<Nav>
+			<ImageContainer>
+				<img src='../images/AndrewSimonsLogo.png' alt='Logo' />
+			</ImageContainer>
+			<ul>
+				<li>
+					<a href='#'>Home</a>
+				</li>
+				<li>
+					<a href='#'>About</a>
+				</li>
+				<li>
+					<a href='#'>Portfolio</a>
+				</li>
+				<li>
+					<a href='#'>Contacts</a>
+				</li>
+				<li>
+					<a href='#'>Blog</a>
+				</li>
+				<Button>Download CV</Button>
+			</ul>
+		</Nav>
 	);
 }
 
-const Container = styled.div`
+const ImageContainer = styled.div`
 	display: flex;
-	justify-content: center;
-`;
+	align-items: center;
+	justify-content: flex-start;
+
+	img {
+		height: 72px;
+		width: 112px;
+	}
+`
+
 
 const Nav = styled.nav`
 	width: 100%;
-	height: 100px;
+	height: 150px;
 	display: flex;
 	align-items: center;
-	padding: 2rem;
+	padding: 0 2rem;
 	border-radius: 100px;
 	position: fixed;
 	font-size: 18px;
+	top: 0;
+	left: 0;
+	right: 0;
+
 
 	ul {
 		width: 100%;
