@@ -34,7 +34,7 @@ const HeroWrapper = styled.div`
 	flex-wrap: wrap;
 	align-items: center;
 	position: relative;
-	margin: 15% 12% 0 12%;
+	margin: 10% 12% 0 12%;
 `;
 
 const HeroTextWrapper = styled.div`
