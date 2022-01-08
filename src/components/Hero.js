@@ -6,7 +6,7 @@ const Main = () => {
 		<Container>
 			<HeroWrapper>
 				<HeroTextWrapper>
-					<p>Hi there 👋  I'm</p>
+					<p>Hi there 👋 </p>
 					<Title>Andrew Simons</Title>
 					<h3>Front End Developer  </h3>
 					<Summary>
@@ -24,7 +24,7 @@ const Main = () => {
 };
 
 const Container = styled.div`
-	
+	margin-bottom: 15rem;
 	width: 100%;
 `;
 
@@ -34,11 +34,12 @@ const HeroWrapper = styled.div`
 	flex-wrap: wrap;
 	align-items: center;
 	position: relative;
-	margin: 15% 5% 0 5%;
+	margin: 15% 12% 0 12%;
 `;
 
 const HeroTextWrapper = styled.div`
-	max-width: 50%;
+	width: 40rem;
+	max-width: 100%;
 	overflow: hidden;
 
 	p {
@@ -54,6 +55,15 @@ const HeroTextWrapper = styled.div`
 		color: #81b29a;
 		margin-bottom: 1rem;
 		text-transform: uppercase;
+	}
+
+	@media (max-width: 1450px) {
+		width: 30rem;
+	}
+
+	@media (max-width: 1000px) {
+		width: 20rem;
+		
 	}
 `;
 
@@ -87,6 +97,13 @@ const HeroImageWrapper = styled.div`
 		height: 500px;
 		border-radius: 25px;
 	}
+
+	@media (max-width: 1250px) {
+		img {
+			height: 300px;
+			width: 300px;
+		}
+	}
 `
 
 const Title = styled.h1`
@@ -96,6 +113,10 @@ const Title = styled.h1`
 	line-height: 6rem;
 	margin-bottom: 1.6rem;
 	color: #3d405b;
+
+	@media (max-width: 1000px) {
+		font-size: 4.4rem;
+	}
 `;
 
 
