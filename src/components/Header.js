@@ -22,46 +22,58 @@ const Header = () => {
 					<li>
 						<a href='#'>Blog</a>
 					</li>
-					<button>Download CV</button>
+					<Button>Download CV</Button>
 				</ul>
 			</Nav>
-		</Container>
+			</Container>
+	
 	);
 }
 
 const Container = styled.div`
-  height: 70px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 4rem;
-
-`
+	display: flex;
+	justify-content: center;
+`;
 
 const Nav = styled.nav`
-	width: 90%;
+	width: 100%;
 	height: 100px;
 	display: flex;
 	align-items: center;
 	padding: 2rem;
 	border-radius: 100px;
-	z-index: 100;
-	background-color: #fff;
-	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	position: fixed;
+	font-size: 18px;
 
 	ul {
-    width: 100%;
+		width: 100%;
 		display: flex;
-    justify-content: flex-end;
+		justify-content: flex-end;
+		align-items: center;
 		flex-direction: row;
 		list-style-type: none;
 	}
 
+	li {
+		padding: 0 15px;
+	}
+
 	a {
 		text-decoration: none;
+
+		color: #3d405b;
 	}
+`;
+
+const Button = styled.button`
+	text-decoration: none;
+	padding: 20px;
+	border-radius: 50px;
+	border: none;
+	background-color: #81b29a;
+	color: #fff;
+	cursor: pointer;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 `;
 
 export default Header;

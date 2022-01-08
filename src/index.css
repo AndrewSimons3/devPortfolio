@@ -3,3 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: #F4F1DE;
+  font-family: 'Spartan', sans-serif;
+}
