@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 const About = () => {
 	return (
-		<Container>
-			<AboutWrapper>
+		
+			<AboutWrapper id="About">
 				<ImageContainer>
 					<img src='../images/Andrew.jpeg' alt='Andrew' />
 				</ImageContainer>
@@ -32,24 +32,22 @@ const About = () => {
 					<Button>Download CV</Button>
 				</SummaryContainer>
 			</AboutWrapper>
-		</Container>
+		
 	);
 };
 
-const Container = styled.div`
-	margin-bottom: 20rem;
+
+const AboutWrapper = styled.div`
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+  margin-bottom: 20rem;
 
 	img {
 		border-radius: 20px;
 		height: 500px;
 		width: 400px;
 	}
-`;
-
-const AboutWrapper = styled.div`
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
 `;
 
 const ImageContainer = styled.div`

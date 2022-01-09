@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Projects = () => {
 	return (
-		<ProjectsWrapper>
+		<ProjectsWrapper id="Projects">
 			<Header>
         <Inner>
           <span></span>
@@ -22,6 +22,7 @@ const ProjectsWrapper = styled.div`
 	align-items: center;
 	justify-content: center;
 	margin-bottom: 20rem;
+  
 `;
 
 const Header = styled.div`

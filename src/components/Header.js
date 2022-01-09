@@ -12,10 +12,10 @@ const Header = () => {
 					<a href='#'>Home</a>
 				</li>
 				<li>
-					<a href='#'>About</a>
+					<a href='#About'>About</a>
 				</li>
 				<li>
-					<a href='#'>Portfolio</a>
+					<a href='#Projects'>Portfolio</a>
 				</li>
 				<li>
 					<a href='#'>Contacts</a>
@@ -24,9 +24,7 @@ const Header = () => {
 					<a href='#'>Blog</a>
 				</li>
 				<Button>
-					<a
-						href='https://github.com/AndrewSimons3/Resume/blob/master/Andrew%20Simons%20Resume.pdf'
-					>
+					<a href='https://github.com/AndrewSimons3/Resume/blob/master/Andrew%20Simons%20Resume.pdf'>
 						Resume
 					</a>
 				</Button>
