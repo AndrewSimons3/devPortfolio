@@ -9,9 +9,10 @@ const About = () => {
 					<img src='../images/Andrew.jpeg' alt='Andrew' />
 				</ImageContainer>
 				<SummaryContainer>
-					<Who>
+          <Who>
+            <span></span>
 						<p>Who I am</p>
-						<span className='line'></span>
+						<span></span>
 					</Who>
 					<AboutTitle>About Me</AboutTitle>
 					<p>
@@ -85,14 +86,14 @@ const Who = styled.div`
 		color: #81b29a;
 		font-weight: 400;
 		font-size: 2.4rem;
-		margin-right: 7px;
+		margin: 0 7px;
 		font-size: 18px;
 	}
 
 	span {
 		display: inline-block;
 		width: 5rem;
-		height: 0.3rem;
+		height: 0.1rem;
 		background: #81b29a;
 	}
 `;

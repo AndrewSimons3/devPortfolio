@@ -5,7 +5,8 @@ const Services = () => {
 	return (
 		<ServicesWrapper>
 			<Header>
-				<Inner>
+        <Inner>
+          <span></span>
 					<p>What I do</p>
 					<span></span>
 				</Inner>
@@ -43,7 +44,7 @@ const ServicesWrapper = styled.div`
 
 const Header = styled.div`
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
 	flex-direction: column;
 	margin-bottom: 3rem;
 
@@ -52,13 +53,14 @@ const Header = styled.div`
 		font-weight: 400;
 		font-size: 2.4rem;
 		margin-right: 7px;
+		margin-left: 7px;
 		font-size: 18px;
 	}
 
 	span {
 		display: inline-block;
 		width: 5rem;
-		height: 0.3rem;
+		height: 0.1rem;
 		background: #81b29a;
 	}
 `;
@@ -86,8 +88,8 @@ const ServicesCard = styled.div`
 	background-color:#3D405B;
 	box-shadow: 0 1.6rem 2.4rem rgb(0 0 0 / 25%);
 	border-radius: 0.8rem;
-	width: 20rem;
-	min-height: 20rem;
+	width: 18rem;
+	min-height: 15rem;
 	max-width: 100%;
 	padding: 1.6rem 4.3rem 2.2rem 3.5rem;
 	position: relative;

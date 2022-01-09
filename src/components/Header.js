@@ -48,7 +48,6 @@ const Nav = styled.nav`
 	align-items: center;
 	padding: 0 2rem;
 	border-radius: 100px;
-	position: fixed;
 	font-size: 18px;
 	top: 0;
 	left: 0;
