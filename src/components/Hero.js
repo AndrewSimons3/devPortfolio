@@ -61,7 +61,7 @@ const HeroTextWrapper = styled.div`
 		width: 30rem;
 	}
 
-	@media (max-width: 1000px) {
+	@media (max-width: 1050px) {
 		width: 20rem;
 		
 	}
@@ -77,7 +77,7 @@ const Summary = styled.div`
 `;
 
 const Button = styled.button`
-width: 200px;
+	width: 200px;
 	text-decoration: none;
 	padding: 20px;
 	border-radius: 50px;
@@ -98,13 +98,20 @@ const HeroImageWrapper = styled.div`
 		border-radius: 25px;
 	}
 
+	@media (max-width: 1515px) {
+		img {
+			height: 400px;
+			width: 400px;
+		}
+	}
+
 	@media (max-width: 1250px) {
 		img {
 			height: 300px;
 			width: 300px;
 		}
 	}
-`
+`;
 
 const Title = styled.h1`
 	font-style: normal;
@@ -114,7 +121,7 @@ const Title = styled.h1`
 	margin-bottom: 1.6rem;
 	color: #3d405b;
 
-	@media (max-width: 1000px) {
+	@media (max-width: 1050px) {
 		font-size: 4.4rem;
 	}
 `;

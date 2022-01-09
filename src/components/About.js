@@ -36,7 +36,7 @@ const About = () => {
 };
 
 const Container = styled.div`
-	margin-bottom: 30rem;
+	margin-bottom: 20rem;
 
 	img {
 		border-radius: 20px;
@@ -49,7 +49,6 @@ const AboutWrapper = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin-bottom: 20rem;
 `;
 
 const ImageContainer = styled.div`
