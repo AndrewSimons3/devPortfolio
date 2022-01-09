@@ -63,7 +63,6 @@ const HeroTextWrapper = styled.div`
 
 	@media (max-width: 1050px) {
 		width: 20rem;
-		
 	}
 `;
 
@@ -86,6 +85,11 @@ const Button = styled.button`
 	color: #fff;
 	cursor: pointer;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+	&:hover {
+		background-color: #6c9c85;
+		transition: 0.3s ease;
+	}
 `;
 
 const HeroImageWrapper = styled.div`

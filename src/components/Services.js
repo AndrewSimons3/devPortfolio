@@ -5,8 +5,8 @@ const Services = () => {
 	return (
 		<ServicesWrapper>
 			<Header>
-        <Inner>
-          <span></span>
+				<Inner>
+					<span></span>
 					<p>What I do</p>
 					<span></span>
 				</Inner>
@@ -15,18 +15,18 @@ const Services = () => {
 
 			<ServicesCardWrapper>
 				<ServicesCard>
-					<img src='' />
-					<h5>Web Design</h5>
+					<img src='../images/brackets-curly.svg' className='filter-red' alt='curly brackets'/>
+					<h3>Web Design</h3>
+					<p>webpage layout, content production, and graphic design</p>
+				</ServicesCard>
+				<ServicesCard>
+					<img src='../images/logo-react.svg' className='filter-blue' alt='react'/>
+					<h3>Front End Development</h3>
 					<p>description of service</p>
 				</ServicesCard>
 				<ServicesCard>
-					<img src='' />
-					<h5>Front End Development</h5>
-					<p>description of service</p>
-				</ServicesCard>
-				<ServicesCard>
-					<img src='' />
-					<h5>Management and Leadership</h5>
+					<img src='../images/note-pencil.svg' className='filter-yellow' alt='pen' />
+					<h3>Management and Leadership</h3>
 					<p>description of service</p>
 				</ServicesCard>
 			</ServicesCardWrapper>
@@ -85,17 +85,47 @@ const ServicesCardWrapper = styled.div`
 `;
 
 const ServicesCard = styled.div`
-	background-color:#3D405B;
+	background-color: #3d405b;
+	color: #f4f1de;
 	box-shadow: 0 1.6rem 2.4rem rgb(0 0 0 / 25%);
 	border-radius: 0.8rem;
-	width: 18rem;
-	min-height: 15rem;
+	width: 20rem;
+	min-height: 18rem;
 	max-width: 100%;
 	padding: 1.6rem 4.3rem 2.2rem 3.5rem;
 	position: relative;
 	margin-bottom: 2.7rem;
 	margin-right: 1rem;
 	margin-left: 1rem;
+
+  h3 {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-weight: 100;
+    font-size: 14px;
+  }
+
+	img {
+		height: 50px;
+		width: 50px;
+	}
+
+	.filter-blue {
+		filter: invert(44%) sepia(90%) saturate(1334%) hue-rotate(160deg)
+			brightness(93%) contrast(101%);
+	}
+
+	.filter-red {
+		filter: invert(18%) sepia(60%) saturate(2383%) hue-rotate(345deg)
+			brightness(96%) contrast(93%);
+	}
+
+	.filter-yellow {
+		filter: invert(76%) sepia(46%) saturate(316%) hue-rotate(353deg)
+			brightness(103%) contrast(90%);
+	}
 `;
 
 export default Services;
