@@ -26,6 +26,10 @@ const Main = () => {
 const Container = styled.div`
 	margin-bottom: 15rem;
 	width: 100%;
+
+	@media (max-width: 400px) {
+		margin-bottom: 5rem;
+	}
 `;
 
 const HeroWrapper = styled.div`
@@ -63,6 +67,10 @@ const HeroTextWrapper = styled.div`
 
 	@media (max-width: 1050px) {
 		width: 20rem;
+	}
+
+	@media (max-width: 400px) {
+		text-align: center;
 	}
 `;
 
@@ -102,6 +110,12 @@ const HeroImageWrapper = styled.div`
 		border-radius: 25px;
 	}
 
+	@media (max-width: 400px) {
+		img {
+			display: none;
+		}
+	}
+
 	@media (max-width: 1515px) {
 		img {
 			height: 400px;
@@ -127,6 +141,12 @@ const Title = styled.h1`
 
 	@media (max-width: 1050px) {
 		font-size: 4.4rem;
+	}
+
+	@media (max-width: 400px) {
+		font-size: 3rem;
+		line-height: 1.25;
+		margin-bottom: 1rem;
 	}
 `;
 

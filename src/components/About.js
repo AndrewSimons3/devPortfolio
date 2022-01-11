@@ -48,6 +48,14 @@ const AboutWrapper = styled.div`
 		height: 500px;
 		width: 400px;
 	}
+
+  @media (max-width: 400px) {
+    img {
+    height: 375px;
+    width: 300px;
+    
+    }
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -55,6 +63,11 @@ const ImageContainer = styled.div`
 	justify-content: center;
 	margin: 0 10px;
 	margin-right: 2rem;
+
+  @media (max-width: 400px) {
+    margin-right: 0;
+    margin-bottom: 4rem;
+  }
 `;
 
 const SummaryContainer = styled.div`
@@ -73,6 +86,17 @@ const SummaryContainer = styled.div`
 
   Button {
     margin-top: auto;
+  }
+
+  @media(max-width: 400px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    Button {
+      margin-top: 2rem;
+    }
   }
 `;
 

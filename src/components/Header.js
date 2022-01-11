@@ -9,7 +9,7 @@ const Header = () => {
 			</ImageContainer>
 			<ul>
 				<li>
-					<a href='#'>Home</a>
+					<a href='#Home'>Home</a>
 				</li>
 				<li>
 					<a href='#About'>About</a>
@@ -18,10 +18,10 @@ const Header = () => {
 					<a href='#Projects'>Portfolio</a>
 				</li>
 				<li>
-					<a href='#'>Contacts</a>
+					<a href='#Contacts'>Contacts</a>
 				</li>
 				<li>
-					<a href='#'>Blog</a>
+					<a href='#Blog'>Blog</a>
 				</li>
 				<Button>
 					<a href='https://github.com/AndrewSimons3/Resume/blob/master/Andrew%20Simons%20Resume.pdf'>
@@ -74,6 +74,14 @@ const Nav = styled.nav`
 		text-decoration: none;
 		cursor: pointer;
 		color: #3d405b;
+	}
+
+	@media (max-width: 400px) {
+		ul {
+			display: none;
+		}
+
+		
 	}
 `;
 
