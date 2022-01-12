@@ -16,17 +16,22 @@ const Projects = () => {
 			<ProjectsCardWrapper>
 				<ProjectsCard>
 					<a href='https://anita-s-bakery-app.web.app/'>
-						<img src='../images/Anita.png' />
+						<img src='../images/Anita.png' alt='bakery'/>
 					</a>
 				</ProjectsCard>
 				<ProjectsCard>
 					<a href='https://disneyplus-clone-bc172.web.app/'>
-						<img src='../images/Disney.png' />
+						<img src='../images/Disney.png' alt='disney'/>
 					</a>
 				</ProjectsCard>
 				<ProjectsCard>
 					<a href='https://teslaclone-a521e.web.app/'>
-						<img src='../images/Tesla.png' />
+						<img src='../images/Tesla.png' alt='tesla'/>
+					</a>
+				</ProjectsCard>
+				<ProjectsCard>
+					<a href='https://reacttodolist-e24ff.web.app/'>
+						<img src='../images/todo.png' alt='todo' />
 					</a>
 				</ProjectsCard>
 			</ProjectsCardWrapper>
