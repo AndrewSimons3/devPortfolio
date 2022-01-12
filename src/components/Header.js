@@ -18,7 +18,7 @@ const Header = () => {
 					<a href='#Projects'>Portfolio</a>
 				</li>
 				<li>
-					<a href='#Contacts'>Contacts</a>
+					<a href='#Contacts'>Contact</a>
 				</li>
 				<li>
 					<a href='#Blog'>Blog</a>
@@ -76,12 +76,12 @@ const Nav = styled.nav`
 		color: #3d405b;
 	}
 
-	@media (max-width: 400px) {
+	@media (max-width: 600px) {
 		ul {
 			display: none;
 		}
 
-		
+
 	}
 `;
 

@@ -40,6 +40,10 @@ const ServicesWrapper = styled.div`
 	align-items: center;
 	justify-content: center;
 	margin-bottom: 20rem;
+
+  @media (max-width: 400px) {
+    margin-bottom: 10rem;
+  }
 `;
 
 const Header = styled.div`

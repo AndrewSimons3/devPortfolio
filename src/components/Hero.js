@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Main = () => {
+const Hero = () => {
 	return (
 		<Container>
 			<HeroWrapper>
@@ -42,7 +42,7 @@ const HeroWrapper = styled.div`
 `;
 
 const HeroTextWrapper = styled.div`
-	width: 40rem;
+	
 	max-width: 100%;
 	overflow: hidden;
 
@@ -69,8 +69,9 @@ const HeroTextWrapper = styled.div`
 		width: 20rem;
 	}
 
-	@media (max-width: 400px) {
+	@media (max-width: 768px) {
 		text-align: center;
+		width: 100%;
 	}
 `;
 
@@ -110,7 +111,7 @@ const HeroImageWrapper = styled.div`
 		border-radius: 25px;
 	}
 
-	@media (max-width: 400px) {
+	@media (max-width: 768px) {
 		img {
 			display: none;
 		}
@@ -143,7 +144,7 @@ const Title = styled.h1`
 		font-size: 4.4rem;
 	}
 
-	@media (max-width: 400px) {
+	@media (max-width: 768px) {
 		font-size: 3rem;
 		line-height: 1.25;
 		margin-bottom: 1rem;
@@ -151,4 +152,4 @@ const Title = styled.h1`
 `;
 
 
-export default Main;
+export default Hero;

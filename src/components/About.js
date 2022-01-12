@@ -3,45 +3,45 @@ import styled from 'styled-components';
 
 const About = () => {
 	return (
-		
-			<AboutWrapper id="About">
-				<ImageContainer>
-					<img src='../images/Andrew.jpeg' alt='Andrew' />
-				</ImageContainer>
-				<SummaryContainer>
-          <Who>
-            <span></span>
-						<p>Who I am</p>
-						<span></span>
-					</Who>
-					<AboutTitle>About Me</AboutTitle>
-					<p>
-						I’m Andrew Simons, a professional and talented Front End Developer.
-						I am passionate about building creative designs and solving
-						problems.
-					</p>
-					<br></br>
-					<p>
-						I develop websites with HTML, CSS, JavaScript, and React. I have
-						experience using various Front End tools such as Redux. .
-					</p>
-					<br></br>
-					<p>
-						Iblafdjs fdsajk fdasjkff fjdks adnfd lsdj slreu fd fdsf fdsf
-					</p>
-					<Button>Download CV</Button>
-				</SummaryContainer>
-			</AboutWrapper>
-		
+		<AboutWrapper id='About'>
+			<ImageContainer>
+				<img src='../images/Andrew.jpeg' alt='Andrew' />
+			</ImageContainer>
+			<SummaryContainer>
+				<Who>
+					<span></span>
+					<p>Who I am</p>
+					<span></span>
+				</Who>
+				<AboutTitle>About Me</AboutTitle>
+				<p>
+					I’m Andrew Simons, a professional and talented Front End Developer. I
+					am passionate about building creative designs and solving problems.
+				</p>
+				<br></br>
+				<p>
+					I develop websites with HTML, CSS, JavaScript, and React. I have
+					experience using various technologies such as API's, npm, Firebase,
+					Redux, and more.
+				</p>
+				<br></br>
+				<p>
+					A passionate and driven individual, I pride myself on being a lifetime
+					learner and applying my skills to produce the best results.
+				</p>
+				<Button>
+					<a href='https://github.com/AndrewSimons3/Resume/blob/master/Andrew%20Simons%20Resume.pdf'>Resume</a>
+				</Button>
+			</SummaryContainer>
+		</AboutWrapper>
 	);
 };
-
 
 const AboutWrapper = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-  margin-bottom: 20rem;
+	margin-bottom: 20rem;
 
 	img {
 		border-radius: 20px;
@@ -49,13 +49,13 @@ const AboutWrapper = styled.div`
 		width: 400px;
 	}
 
-  @media (max-width: 400px) {
-    img {
-    height: 375px;
-    width: 300px;
-    
-    }
-  }
+	@media (max-width: 768px) {
+		margin-bottom: 10rem;
+		img {
+			height: 375px;
+			width: 300px;
+		}
+	}
 `;
 
 const ImageContainer = styled.div`
@@ -64,10 +64,10 @@ const ImageContainer = styled.div`
 	margin: 0 10px;
 	margin-right: 2rem;
 
-  @media (max-width: 400px) {
-    margin-right: 0;
-    margin-bottom: 4rem;
-  }
+	@media (max-width: 768px) {
+		margin-right: 0;
+		margin-bottom: 4rem;
+	}
 `;
 
 const SummaryContainer = styled.div`
@@ -81,23 +81,33 @@ const SummaryContainer = styled.div`
 		color: #3d405b;
 		font-weight: 400;
 		margin-right: 7px;
-		font-size: 18px;
+		font-size: 16px;
 	}
 
-  Button {
-    margin-top: auto;
-  }
+	Button {
+		margin-top: auto;
 
-  @media(max-width: 400px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+		a {
+			text-decoration: none;
+			color: #fff;
+		}
 
-    Button {
-      margin-top: 2rem;
-    }
-  }
+		&:hover {
+			background-color: #6c9c85;
+			transition: 0.3s ease;
+		}
+	}
+
+	@media (max-width: 768px) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+
+		Button {
+			margin-top: 2rem;
+		}
+	}
 `;
 
 const Who = styled.div`
@@ -138,7 +148,5 @@ const Button = styled.button`
 	cursor: pointer;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 `;
-
-
 
 export default About;
