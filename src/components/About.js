@@ -99,7 +99,7 @@ const SummaryContainer = styled.div`
 		}
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 798px) {
 		display: flex;
 		justify-content: center;
 		align-items: center;
