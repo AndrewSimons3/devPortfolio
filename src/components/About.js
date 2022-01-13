@@ -76,6 +76,7 @@ const SummaryContainer = styled.div`
 	margin: 0 10px;
 	max-width: 20rem;
 	overflow: hidden;
+	padding-bottom: 10px;
 
 	p {
 		color: #3d405b;

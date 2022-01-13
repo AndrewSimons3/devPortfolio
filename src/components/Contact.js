@@ -34,7 +34,7 @@ const Contact = () => {
 					</div>
 				</Icons>
 				<FormContainer>
-					<form>
+					<form method="POST">
 						<input type='text' name='name' placeholder='Full Name'></input>
 						<div className='row-2'>
 							<input type='text' name='email' placeholder='Phone'></input>
@@ -105,7 +105,7 @@ const ContactBox = styled.div`
 `;
 
 const Icons = styled.div`
-	overflow: hidden;
+	
 
 	.contact-info {
 		display: flex;
@@ -122,25 +122,24 @@ const Icons = styled.div`
 `;
 
 const FormContainer = styled.div`
-	width: 50rem;
+	width: 40rem;
 	max-width: 100%;
 
 	input {
-		height: 4.8rem;
+		height: 3.6rem;
     display: flex;
     align-items: center;
-    padding-left: 3.2rem;
-    padding-right: 3.2rem;
-    margin-bottom: 3.2rem;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
     font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 1.9rem;
-    color: #fff;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    color: #3D405B;
     box-shadow: 0 0.8rem 0.4rem rgb(51 51 51 / 25%);
     border-radius: 3rem;
     display: block;
     width: 100%;
-    border: 1px solid #fcfcfc;
+    border: 1px solid #3D405B;
 	}
 
   .row-2 {
@@ -156,37 +155,36 @@ const FormContainer = styled.div`
 
   textarea {
     border-radius: 1rem;
-    padding: 2.2rem 3.2rem;
-    margin-bottom: 4.4rem;
-    font-family: SF Pro Display,sans-serif;
-    font-style: normal;
+    padding: 2.2rem 2rem;
+    margin-bottom: 2rem;
     font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 1.9rem;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
     color: #3D405B;
     box-shadow: 0 0.8rem 0.4rem rgb(51 51 51 / 25%);
     border-radius: 3rem;
     display: block;
     width: 100%;
-    border: 1px solid #fcfcfc;
+    border: 1px solid #3D405B;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 300;
   }
 
   button {
-        height: 4.8rem;
-    width: 18.7rem;
+    height: 3.6rem;
+    width: 14rem;
     display: flex;
     justify-content: center;
     align-items: center;
     background: #81B29A;
     box-shadow: 0 1.6rem 1.6rem rgb(51 51 51 / 25%);
     border-radius: 3rem;
-    font-family: SF Pro Display,sans-serif;
     font-style: normal;
-    font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 1.9rem;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.4rem;
     text-align: center;
-    color: #303030;
+    color: #F4F1DE;
     border: none;
 
     &:hover {

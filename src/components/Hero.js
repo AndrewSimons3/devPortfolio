@@ -46,9 +46,9 @@ const HeroWrapper = styled.div`
 `;
 
 const HeroTextWrapper = styled.div`
-	
 	width: 55%;
 	overflow: hidden;
+	padding-bottom: 10px;
 
 	p {
 		text-transform: uppercase;
@@ -65,9 +65,11 @@ const HeroTextWrapper = styled.div`
 		text-transform: uppercase;
 	}
 
-	${'' /* @media (max-width: 1450px) {
+	${
+		'' /* @media (max-width: 1450px) {
 		width: 40rem;
-	} */}
+	} */
+	}
 
 	@media (max-width: 1050px) {
 		width: 20rem;
