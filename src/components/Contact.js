@@ -34,7 +34,7 @@ const Contact = () => {
 					</div>
 				</Icons>
 				<FormContainer>
-					<form method="POST">
+					<form method='POST'>
 						<input type='text' name='name' placeholder='Full Name'></input>
 						<div className='row-2'>
 							<input type='text' name='email' placeholder='Phone'></input>
@@ -105,8 +105,6 @@ const ContactBox = styled.div`
 `;
 
 const Icons = styled.div`
-	
-
 	.contact-info {
 		display: flex;
 		flex-wrap: wrap;
@@ -127,72 +125,92 @@ const FormContainer = styled.div`
 
 	input {
 		height: 3.6rem;
-    display: flex;
-    align-items: center;
-    padding: 0 2rem;
-    margin-bottom: 2rem;
-    font-weight: 400;
-    font-size: 1.2rem;
-    line-height: 1.4rem;
-    color: #3D405B;
-    box-shadow: 0 0.8rem 0.4rem rgb(51 51 51 / 25%);
-    border-radius: 3rem;
-    display: block;
-    width: 100%;
-    border: 1px solid #3D405B;
+		display: flex;
+		align-items: center;
+		padding: 0 2rem;
+		margin-bottom: 2rem;
+		font-weight: 400;
+		font-size: 1.2rem;
+		line-height: 1.4rem;
+		color: #3d405b;
+		box-shadow: 0 0.8rem 0.4rem rgb(51 51 51 / 25%);
+		border-radius: 3rem;
+		display: block;
+		width: 100%;
+		border: 1px solid #3d405b;
 	}
 
-  .row-2 {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    flex-wrap: wrap;
+	input:focus {
+		outline: none !important;
+		border: 1px solid #3d405b;
+		box-shadow: 0 0 10px #3d405b;
+	}
 
-    input {
-      width: 49%;
-    }
-  }
+	.row-2 {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		flex-wrap: wrap;
 
-  textarea {
-    border-radius: 1rem;
-    padding: 2.2rem 2rem;
-    margin-bottom: 2rem;
-    font-weight: 400;
-    font-size: 1.2rem;
-    line-height: 1.4rem;
-    color: #3D405B;
-    box-shadow: 0 0.8rem 0.4rem rgb(51 51 51 / 25%);
-    border-radius: 3rem;
-    display: block;
-    width: 100%;
-    border: 1px solid #3D405B;
-    font-family: 'Spartan', sans-serif;
-    font-weight: 300;
-  }
+		input {
+			width: 49%;
+		}
+	}
 
-  button {
-    height: 3.6rem;
-    width: 14rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #81B29A;
-    box-shadow: 0 1.6rem 1.6rem rgb(51 51 51 / 25%);
-    border-radius: 3rem;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 1rem;
-    line-height: 1.4rem;
-    text-align: center;
-    color: #F4F1DE;
-    border: none;
+	textarea {
+		border-radius: 1rem;
+		padding: 2.2rem 2rem;
+		margin-bottom: 2rem;
+		font-weight: 400;
+		font-size: 1.2rem;
+		line-height: 1.4rem;
+		color: #3d405b;
+		box-shadow: 0 0.8rem 0.4rem rgb(51 51 51 / 25%);
+		border-radius: 3rem;
+		display: block;
+		width: 100%;
+		border: 1px solid #3d405b;
+		font-family: 'Spartan', sans-serif;
+		font-weight: 300;
+	}
 
-    &:hover {
-      background: #6c9c85;
-      transition: 0.3s ease-in;
-    }
-  }
-}
+	textarea:focus {
+		outline: none !important;
+		border: 1px solid #3d405b;
+		box-shadow: 0 0 10px #3d405b;
+	}
+
+	button {
+		height: 3.6rem;
+		width: 14rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: #81b29a;
+		box-shadow: 0 1.6rem 1.6rem rgb(51 51 51 / 25%);
+		border-radius: 3rem;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 1rem;
+		line-height: 1.4rem;
+		text-align: center;
+		color: #f4f1de;
+		border: none;
+
+		button:active {
+			outline: none;
+			border: none;
+		}
+
+		button:focus {
+			outline: 0;
+		}
+
+		&:hover {
+			background: #6c9c85;
+			transition: 0.3s ease-in;
+		}
+	}
 `;
 
 export default Contact;
