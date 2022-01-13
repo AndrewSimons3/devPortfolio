@@ -39,11 +39,15 @@ const HeroWrapper = styled.div`
 	align-items: center;
 	position: relative;
 	margin: 2% 12% 0 12%;
+
+	@media (max-width: 850px) {
+		justify-content: center;
+	}
 `;
 
 const HeroTextWrapper = styled.div`
 	
-	max-width: 100%;
+	width: 55%;
 	overflow: hidden;
 
 	p {
@@ -61,15 +65,19 @@ const HeroTextWrapper = styled.div`
 		text-transform: uppercase;
 	}
 
-	@media (max-width: 1450px) {
-		width: 30rem;
-	}
+	${'' /* @media (max-width: 1450px) {
+		width: 40rem;
+	} */}
 
 	@media (max-width: 1050px) {
 		width: 20rem;
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 850px) {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
 		text-align: center;
 		width: 100%;
 	}
@@ -117,10 +125,14 @@ const HeroImageWrapper = styled.div`
 		}
 	}
 
+	@media (max-width: 850px) {
+		
+	}
+
 	@media (max-width: 1515px) {
 		img {
-			height: 400px;
-			width: 400px;
+			height: 300px;
+			width: 300px;
 		}
 	}
 
