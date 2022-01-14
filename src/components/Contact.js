@@ -160,26 +160,29 @@ const FormContainer = styled.div`
 	max-width: 100%;
 
 	@media (max-width: 756px) {
-   
+		width: 35rem;
+	}
+
+	@media (max-width: 635px) {
 		width: 30rem;
 	}
 
-	@media (max-width: 500px) {
+	@media (max-width: 550px) {
 		width: 25rem;
 	}
 
-	@media (max-width: 430px) {
+	@media (max-width: 480px) {
 		width: 20rem;
 	}
 
-  form {
-    @media(max-width: 678px) {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-    }
-  }
+	form {
+		@media (max-width: 756px) {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
 
 	input {
 		height: 3.6rem;
