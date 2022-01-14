@@ -20,9 +20,6 @@ const Header = () => {
 				<li>
 					<a href='#Contacts'>Contact</a>
 				</li>
-				<li>
-					<a href='#Blog'>Blog</a>
-				</li>
 				<Button>
 					<a href='https://github.com/AndrewSimons3/Resume/blob/master/Andrew%20Simons%20Resume.pdf'>
 						Resume
@@ -76,8 +73,19 @@ const Nav = styled.nav`
 		color: #3d405b;
 	}
 
+	@media (max-width: 800px) {
+		li {
+			font-size: 12px;
+		}
+
+		Button {
+			width: 100px;
+			padding: 15px;
+		}
+	}
+
 	@media (max-width: 600px) {
-		ul {
+		li {
 			display: none;
 		}
 

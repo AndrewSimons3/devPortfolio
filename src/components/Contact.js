@@ -48,7 +48,7 @@ const Contact = () => {
 							placeholder='Enter your message'
 							required
 						></textarea>
-						<button type='submit'>Submit</button>
+						<button>Submit</button>
 					</form>
 				</FormContainer>
 			</ContactBox>
@@ -101,7 +101,11 @@ const Title = styled.h3`
 
 const ContactBox = styled.div`
 	display: flex;
+  justify-content: center;
+  align-items: center;
 	flex-wrap: wrap;
+
+  
 `;
 
 const Icons = styled.div`
@@ -109,19 +113,73 @@ const Icons = styled.div`
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-		margin-bottom: 4rem;
-		margin-right: 2rem;
+		margin: 0 2rem 4rem 2rem;
+	}
+
+	.image-container {
+		background-color: #f2cc8f;
+		padding: 10px;
+		border-radius: 50px;
+		margin-right: 10px;
 	}
 
 	img {
 		height: 50px;
 		width: 50px;
 	}
+
+  @media (max-width: 1007px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 25px;
+      height: 25px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+
+  @media (max-width:684px) {
+    display: flex;
+    flex-direction: column;
+    
+    .contact-info {
+      margin-bottom: 2rem;
+      }
+    }
+  }
 `;
+
+
 
 const FormContainer = styled.div`
 	width: 40rem;
 	max-width: 100%;
+
+	@media (max-width: 756px) {
+   
+		width: 30rem;
+	}
+
+	@media (max-width: 500px) {
+		width: 25rem;
+	}
+
+	@media (max-width: 430px) {
+		width: 20rem;
+	}
+
+  form {
+    @media(max-width: 678px) {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 
 	input {
 		height: 3.6rem;
@@ -154,6 +212,10 @@ const FormContainer = styled.div`
 
 		input {
 			width: 49%;
+
+			@media (max-width: 678px) {
+				width: 100%;
+			}
 		}
 	}
 
@@ -179,7 +241,6 @@ const FormContainer = styled.div`
 		border: 1px solid #3d405b;
 		box-shadow: 0 0 10px #3d405b;
 	}
-
 	button {
 		height: 3.6rem;
 		width: 14rem;
@@ -189,7 +250,6 @@ const FormContainer = styled.div`
 		background: #81b29a;
 		box-shadow: 0 1.6rem 1.6rem rgb(51 51 51 / 25%);
 		border-radius: 3rem;
-		font-style: normal;
 		font-weight: 300;
 		font-size: 1rem;
 		line-height: 1.4rem;
@@ -197,18 +257,19 @@ const FormContainer = styled.div`
 		color: #f4f1de;
 		border: none;
 
-		button:active {
-			outline: none;
-			border: none;
-		}
-
-		button:focus {
-			outline: 0;
-		}
-
 		&:hover {
 			background: #6c9c85;
 			transition: 0.3s ease-in;
+		}
+
+		button:focus {
+			border: 1px solid #3d405b;
+		}
+
+		@media (max-width: 974px) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 	}
 `;
