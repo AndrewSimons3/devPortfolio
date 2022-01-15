@@ -117,9 +117,36 @@ const ServicesCard = styled.div`
 	margin-right: 1rem;
 	margin-left: 1rem;
 
-  h3 {
-    margin-bottom: 1rem;
+  &:hover {
+    background: #0fb;
+    transition: all 0.4s ease-in-out;
+}
   }
+
+
+  h3 {
+	font-family: cursive;
+	font-size: 1.2rem;
+	color: #f4f1de;
+	position: relative;
+  margin-bottom: 1rem;
+}
+
+h3::after {
+	position: absolute;
+	content: "";
+	width: 0%;
+	height: 2px;
+	background-color: #f4f1de;
+	left: 50%;
+	bottom: -5px;
+	transition: all 0.4s ease-in-out;
+}
+
+&:hover h3::after {
+	width: 100%;
+	left: 0;
+}
 
   p {
     font-weight: 100;
