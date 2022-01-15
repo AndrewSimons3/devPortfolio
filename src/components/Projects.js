@@ -15,30 +15,55 @@ const Projects = () => {
 
 			<ProjectsCardWrapper>
 				<ProjectsCard>
-					<CardContainer>
-						<h3>Anita's Bakery</h3>
-						<p>
-							E-commerce bakery app to add baking goods to a cart and submit
-							order to a firestore database
-						</p>
-						<button>View App</button>
-						<button>View Github</button>
-					</CardContainer>
+					<div className='anita'>
+						<CardContainer>
+							<h3>Anita's Bakery</h3>
+							<p>
+								E-commerce bakery app to add baking goods to a cart and submit
+								order to a firestore database
+							</p>
+							<div className='button-container'>
+								<button>View App</button>
+								<button>View Github</button>
+							</div>
+						</CardContainer>
+					</div>
 				</ProjectsCard>
 				<ProjectsCard>
-					<a href='https://disneyplus-clone-bc172.web.app/'>
-						<img src='../images/Disney.png' alt='disney' />
-					</a>
+					<div className='disney'>
+						<CardContainer>
+							<h3>Disney+ Clone</h3>
+							<p></p>
+							<div className='button-container'>
+								<button>View App</button>
+								<button>View Github</button>
+							</div>
+						</CardContainer>
+					</div>
 				</ProjectsCard>
 				<ProjectsCard>
-					<a href='https://teslaclone-a521e.web.app/'>
-						<img src='../images/Tesla.png' alt='tesla' />
-					</a>
+					<div className='tesla'>
+						<CardContainer>
+							<h3>Tesla Clone</h3>
+							<p></p>
+							<div className='button-container'>
+								<button>View App</button>
+								<button>View Github</button>
+							</div>
+						</CardContainer>
+					</div>
 				</ProjectsCard>
 				<ProjectsCard>
-					<a href='https://reacttodolist-e24ff.web.app/'>
-						<img src='../images/todo.png' alt='todo' />
-					</a>
+					<div className='todo'>
+						<CardContainer>
+							<h3>Todo List</h3>
+							<p></p>
+							<div className='button-container'>
+								<button>View App</button>
+								<button>View Github</button>
+							</div>
+						</CardContainer>
+					</div>
 				</ProjectsCard>
 			</ProjectsCardWrapper>
 		</ProjectsWrapper>
@@ -61,8 +86,7 @@ const ProjectsCardWrapper = styled.div`
 
 const ProjectsCard = styled.div`
 	background-color: #3d405b;
-	background-image: url('../images/Anita.png');
-	background-size: cover;
+
 	color: #f4f1de;
 	box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
 		rgba(0, 0, 0, 0.22) 0px 15px 12px;
@@ -75,7 +99,6 @@ const ProjectsCard = styled.div`
 	margin-right: 1rem;
 	margin-left: 1rem;
 
-
 	img {
 		width: 100%;
 		height: 100%;
@@ -86,6 +109,38 @@ const ProjectsCard = styled.div`
 	@media (max-width: 500px) {
 		min-height: 10rem;
 		width: 20rem;
+	}
+
+	.anita {
+		background-image: url('../images/Anita.png');
+		background-size: cover;
+		width: 100%;
+		height: 100%;
+		border-radius: 25px;
+	}
+
+	.disney {
+		background-image: url('../images/Disney.png');
+		background-size: cover;
+		width: 100%;
+		height: 100%;
+		border-radius: 25px;
+	}
+
+	.tesla {
+		background-image: url('../images/Tesla.png');
+		background-size: cover;
+		width: 100%;
+		height: 100%;
+		border-radius: 25px;
+	}
+
+	.todo {
+		background-image: url('../images/todo.png');
+		background-size: cover;
+		width: 100%;
+		height: 100%;
+		border-radius: 25px;
 	}
 `;
 
@@ -98,13 +153,35 @@ const CardContainer = styled.div`
 	height: 100%;
 	opacity: 0;
 	border-radius: 25px;
+	padding: 20px;
 
 	&:hover {
 		opacity: 0.9;
 		transition: all 0.6s ease;
 		transition-delay: 0.2s;
 		background: #3d405b;
-		
+	}
+
+	h3 {
+		margin-bottom: 1rem;
+	}
+
+	p {
+		margin-bottom: 1rem;
+	}
+
+	.button-container {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+
+	button {
+		border: none;
+		margin: 0 1rem;
+		padding: 1rem 2rem;
+		border-radius: 25px;
+		background-color: 
 	}
 `;
 
