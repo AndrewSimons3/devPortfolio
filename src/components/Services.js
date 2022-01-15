@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Services = () => {
 	return (
-		<ServicesWrapper id="Services">
+		<ServicesWrapper id='Services'>
 			<Header>
 				<Inner>
 					<span></span>
@@ -15,19 +15,34 @@ const Services = () => {
 
 			<ServicesCardWrapper>
 				<ServicesCard>
-					<img src='../images/brackets-curly.svg' className='filter-red' alt='curly brackets'/>
+					<img
+						src='../images/brackets-curly.svg'
+						className='filter-red'
+						alt='curly brackets'
+					/>
 					<h3>Web Design</h3>
-					<p>webpage layout, content production, and graphic design</p>
+					<p>
+						I use various tools and technologies such as HTML, CSS, Bootstrap,
+						Sass, to design attractive, responsive applications.
+					</p>
 				</ServicesCard>
 				<ServicesCard>
-					<img src='../images/logo-react.svg' className='filter-blue' alt='react'/>
+					<img
+						src='../images/logo-react.svg'
+						className='filter-blue'
+						alt='react'
+					/>
 					<h3>Front End Development</h3>
-					<p>description of service</p>
+					<p>I am an expert problem solver with a mission of creating the best user experience using JavaScript and React.</p>
 				</ServicesCard>
 				<ServicesCard>
-					<img src='../images/note-pencil.svg' className='filter-yellow' alt='pen' />
+					<img
+						src='../images/note-pencil.svg'
+						className='filter-yellow'
+						alt='pen'
+					/>
 					<h3>Management and Leadership</h3>
-					<p>description of service</p>
+					<p>Over 5 years of sales, customer service, and operations management experience, I bring strong leadership and business experience.</p>
 				</ServicesCard>
 			</ServicesCardWrapper>
 		</ServicesWrapper>

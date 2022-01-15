@@ -21,7 +21,7 @@ const About = () => {
 				<br></br>
 				<p>
 					I develop websites with HTML, CSS, JavaScript, and React. I have
-					experience using various technologies such as API's, npm, Firebase,
+					experience using various technologies such as Node, Firebase, MongoDB,
 					Redux, and more.
 				</p>
 				<br></br>
@@ -30,7 +30,13 @@ const About = () => {
 					learner and applying my skills to produce the best results.
 				</p>
 				<Button>
-					<a href='https://github.com/AndrewSimons3/Resume/blob/master/Andrew%20Simons%20Resume.pdf'>Resume</a>
+					<a
+						href='https://github.com/AndrewSimons3/Resume/blob/master/Andrew%20Simons%20Resume.pdf'
+						target='_blank'
+						rel='noreferrer'
+					>
+						Resume
+					</a>
 				</Button>
 			</SummaryContainer>
 		</AboutWrapper>
@@ -41,7 +47,7 @@ const AboutWrapper = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin-bottom: 20rem;
+	margin-bottom: 15rem;
 
 	img {
 		border-radius: 20px;

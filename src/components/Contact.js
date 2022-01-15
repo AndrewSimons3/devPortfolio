@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Contact = () => {
 	return (
-		<ContactWrapper>
+		<ContactWrapper id="Contact">
 			<Header>
 				<Inner>
 					<span></span>

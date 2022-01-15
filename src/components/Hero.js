@@ -1,22 +1,33 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-scroll';
 
 const Hero = () => {
 	return (
-		<Container>
+		<Container id='Hero'>
 			<HeroWrapper>
 				<HeroTextWrapper>
 					<p>Hi there 👋 </p>
 					<Title>Andrew Simons</Title>
-					<h3>Front End Developer  </h3>
+					<h3>Front End Developer </h3>
 					<Summary>
-						I’m a professional Front End Developer with a focus in Javascript & React
-						based in Austin, TX.
+						I’m a professional Front End Developer with a focus in Javascript &
+						React based in Austin, TX.
 					</Summary>
-					<Button>Hire Me</Button>
+					<Link
+						className='li'
+						activeClass='active'
+						to='Contact'
+						spy={true}
+						smooth={true}
+						offset={-50}
+						duration={1000}
+					>
+						<Button>Hire Me</Button>
+					</Link>
 				</HeroTextWrapper>
 				<HeroImageWrapper>
-					<img src='../images/AndrewMoji.png' alt=''/>
+					<img src='../images/AndrewMoji.png' alt='' />
 				</HeroImageWrapper>
 			</HeroWrapper>
 		</Container>

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-scroll';
 
 const Header = () => {
 	return (
@@ -8,20 +9,56 @@ const Header = () => {
 				<img src='../images/AndrewSimonsLogo.png' alt='Logo' />
 			</ImageContainer>
 			<ul>
-				<li>
+				<Link
+					className='li'
+					activeClass='active'
+					to='Hero'
+					spy={true}
+					smooth={true}
+					offset={-50}
+					duration={500}
+				>
 					<a href='#Home'>Home</a>
-				</li>
-				<li>
+				</Link>
+				<Link
+					className='li'
+					activeClass='active'
+					to='About'
+					spy={true}
+					smooth={true}
+					offset={-50}
+					duration={1000}
+				>
 					<a href='#About'>About</a>
-				</li>
-				<li>
+				</Link>
+				<Link
+					className='li'
+					activeClass='active'
+					to='Projects'
+					spy={true}
+					smooth={true}
+					offset={-50}
+					duration={1000}
+				>
 					<a href='#Projects'>Portfolio</a>
-				</li>
-				<li>
+				</Link>
+				<Link
+					className='li'
+					activeClass='active'
+					to='Contact'
+					spy={true}
+					smooth={true}
+					offset={-50}
+					duration={1000}
+				>
 					<a href='#Contacts'>Contact</a>
-				</li>
+				</Link>
 				<Button>
-					<a href='https://github.com/AndrewSimons3/Resume/blob/master/Andrew%20Simons%20Resume.pdf'>
+					<a
+						href='https://github.com/AndrewSimons3/Resume/blob/master/Andrew%20Simons%20Resume.pdf'
+						target='_blank'
+						rel='noreferrer'
+					>
 						Resume
 					</a>
 				</Button>
@@ -63,7 +100,7 @@ const Nav = styled.nav`
 		list-style-type: none;
 	}
 
-	li {
+	.li {
 		padding: 0 15px;
 	}
 
@@ -74,7 +111,7 @@ const Nav = styled.nav`
 	}
 
 	@media (max-width: 800px) {
-		li {
+		.li {
 			font-size: 12px;
 		}
 
@@ -85,11 +122,9 @@ const Nav = styled.nav`
 	}
 
 	@media (max-width: 600px) {
-		li {
+		.li {
 			display: none;
 		}
-
-
 	}
 `;
 
