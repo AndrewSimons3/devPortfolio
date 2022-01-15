@@ -7,9 +7,9 @@ const Hero = () => {
 		<Container id='Hero'>
 			<HeroWrapper>
 				<HeroTextWrapper>
-					<p>Hi there 👋 </p>
+					<p>Hi there 👋 my name is</p>
 					<Title>Andrew Simons</Title>
-					<h3>Front End Developer </h3>
+					<h3>Front End Developer 🧑‍💻</h3>
 					<Summary>
 						I’m a professional Front End Developer with a focus in Javascript &
 						React based in Austin, TX.
@@ -144,8 +144,8 @@ const HeroImageWrapper = styled.div`
 
 	@media (max-width: 1515px) {
 		img {
-			height: 300px;
-			width: 300px;
+			height: 400px;
+			width: 400px;
 		}
 	}
 

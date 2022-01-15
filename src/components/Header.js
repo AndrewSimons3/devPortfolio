@@ -101,6 +101,7 @@ const Nav = styled.nav`
 	}
 
 	.li {
+		color: #2d2f46;
 		padding: 0 15px;
 	}
 
@@ -109,6 +110,11 @@ const Nav = styled.nav`
 		cursor: pointer;
 		color: #3d405b;
 	}
+
+	a:hover {
+		
+	}
+
 
 	@media (max-width: 800px) {
 		.li {

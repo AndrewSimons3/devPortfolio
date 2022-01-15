@@ -23,8 +23,24 @@ const Projects = () => {
 								order to a firestore database
 							</p>
 							<div className='button-container'>
-								<button>View App</button>
-								<button>View Github</button>
+								<button>
+									<a
+										href='https://anita-s-bakery-app.web.app/'
+										target='_blank'
+										rel='noreferrer'
+									>
+										View App
+									</a>
+								</button>
+								<button>
+									<a
+										href='https://github.com/AndrewSimons3/Anita-Bakery-2'
+										target='_blank'
+										rel='noreferrer'
+									>
+										View Github
+									</a>
+								</button>
 							</div>
 						</CardContainer>
 					</div>
@@ -33,10 +49,26 @@ const Projects = () => {
 					<div className='disney'>
 						<CardContainer>
 							<h3>Disney+ Clone</h3>
-							<p></p>
+							<p>Login using google authentication with firebase to view and select Disney+ movies and tv shows built with React and Redux.</p>
 							<div className='button-container'>
-								<button>View App</button>
-								<button>View Github</button>
+								<button>
+									<a
+										href='https://disneyplus-clone-bc172.web.app/'
+										target='_blank'
+										rel='noreferrer'
+									>
+										View App
+									</a>
+								</button>
+								<button>
+									<a
+										href='https://github.com/AndrewSimons3/DisneyClone'
+										target='_blank'
+										rel='noreferrer'
+									>
+										View Github
+									</a>
+								</button>
 							</div>
 						</CardContainer>
 					</div>
@@ -45,10 +77,26 @@ const Projects = () => {
 					<div className='tesla'>
 						<CardContainer>
 							<h3>Tesla Clone</h3>
-							<p></p>
+							<p>A beautiful and elegant landing page for the one and only Tesla using React and Redux.</p>
 							<div className='button-container'>
-								<button>View App</button>
-								<button>View Github</button>
+								<button>
+									<a
+										href='https://teslaclone-a521e.web.app/'
+										target='_blank'
+										rel='noreferrer'
+									>
+										View App
+									</a>
+								</button>
+								<button>
+									<a
+										href='https://github.com/AndrewSimons3/TeslaClone'
+										target='_blank'
+										rel='noreferrer'
+									>
+										View Github
+									</a>
+								</button>
 							</div>
 						</CardContainer>
 					</div>
@@ -57,10 +105,26 @@ const Projects = () => {
 					<div className='todo'>
 						<CardContainer>
 							<h3>Todo List</h3>
-							<p></p>
+							<p>Not your average todo list with several fun and unique features.</p>
 							<div className='button-container'>
-								<button>View App</button>
-								<button>View Github</button>
+								<button>
+									<a
+										href='https://reacttodolist-e24ff.web.app/'
+										target='_blank'
+										rel='noreferrer'
+									>
+										View App
+									</a>
+								</button>
+								<button>
+									<a
+										href='https://github.com/AndrewSimons3/TodoList'
+										target='_blank'
+										rel='noreferrer'
+									>
+										View Github
+									</a>
+								</button>
 							</div>
 						</CardContainer>
 					</div>
@@ -75,7 +139,7 @@ const ProjectsWrapper = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	margin-bottom: 20rem;
+	margin-bottom: 12rem;
 `;
 
 const ProjectsCardWrapper = styled.div`
@@ -154,12 +218,15 @@ const CardContainer = styled.div`
 	opacity: 0;
 	border-radius: 25px;
 	padding: 20px;
+	transition: all 0.6s ease;
+	transition-delay: 0.1s;
 
 	&:hover {
 		opacity: 0.9;
 		transition: all 0.6s ease;
-		transition-delay: 0.2s;
+		transition-delay: 0.1s;
 		background: #3d405b;
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
 	}
 
 	h3 {
@@ -168,6 +235,8 @@ const CardContainer = styled.div`
 
 	p {
 		margin-bottom: 1rem;
+    text-align: center;
+    font-size: 12px;
 	}
 
 	.button-container {
@@ -178,11 +247,21 @@ const CardContainer = styled.div`
 
 	button {
 		border: none;
-		margin: 0 1rem;
+		margin: 0 0.5rem;
 		padding: 1rem 2rem;
 		border-radius: 25px;
-		background-color: 
 	}
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  @media (max-width: 768px) {
+    button {
+      padding: 0.5rem 1rem;
+    }
+  }
 `;
 
 const Header = styled.div`

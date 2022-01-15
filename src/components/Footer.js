@@ -8,7 +8,7 @@ const Footer = () => {
 				<img src='../images/AndrewSimonsLogo.png' alt='Logo' />
 			</div>
 			<div className='text-container'>
-				<p>Copyright & 2022</p>
+				<p>Copyright &copy; 2022</p>
 			</div>
 			<div className='social-container'>
 				<div className='img-container'>

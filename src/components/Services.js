@@ -54,7 +54,7 @@ const ServicesWrapper = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	margin-bottom: 20rem;
+	margin-bottom: 12rem;
 
   @media (max-width: 400px) {
     margin-bottom: 10rem;
