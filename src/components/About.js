@@ -70,6 +70,11 @@ const ImageContainer = styled.div`
 	margin: 0 10px;
 	margin-right: 2rem;
 
+	img {
+		box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+			rgba(0, 0, 0, 0.22) 0px 15px 12px;
+	}
+
 	@media (max-width: 768px) {
 		margin-right: 0;
 		margin-bottom: 4rem;

@@ -117,40 +117,44 @@ const Icons = styled.div`
 	}
 
 	.image-container {
-		background-color: #f2cc8f;
+		background-color: #3d405b;
 		padding: 10px;
-		border-radius: 50px;
+		border-radius: 100px;
 		margin-right: 10px;
+    border: 2px solid #fff;
+		box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 	}
 
 	img {
-		height: 50px;
-		width: 50px;
+		height: 40px;
+		width: 40px;
+		filter: invert(88%) sepia(29%) saturate(128%) hue-rotate(353deg)
+			brightness(106%) contrast(91%);
 	}
 
-  @media (max-width: 1007px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	@media (max-width: 1007px) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-    img {
-      width: 25px;
-      height: 25px;
-    }
+		img {
+			width: 25px;
+			height: 25px;
+		}
 
-    p {
-      font-size: 12px;
-    }
+		p {
+			font-size: 12px;
+		}
 
-  @media (max-width:684px) {
-    display: flex;
-    flex-direction: column;
-    
-    .contact-info {
-      margin-bottom: 2rem;
-      }
-    }
-  }
+		@media (max-width: 684px) {
+			display: flex;
+			flex-direction: column;
+
+			.contact-info {
+				margin-bottom: 2rem;
+			}
+		}
+	}
 `;
 
 
@@ -190,7 +194,7 @@ const FormContainer = styled.div`
 		align-items: center;
 		padding: 0 2rem;
 		margin-bottom: 2rem;
-		font-weight: 400;
+		font-weight: 300;
 		font-size: 1.2rem;
 		line-height: 1.4rem;
 		color: #3d405b;
@@ -199,6 +203,12 @@ const FormContainer = styled.div`
 		display: block;
 		width: 100%;
 		border: 1px solid #3d405b;
+		font-family: 'Spartan', sans-serif;
+	}
+
+	input::placeholder {
+		font-weight: 300;
+		color: #3d405b;
 	}
 
 	input:focus {
@@ -238,6 +248,10 @@ const FormContainer = styled.div`
 		font-family: 'Spartan', sans-serif;
 		font-weight: 300;
 	}
+
+  textarea::placeholder {
+    color: #3d405b;
+  }
 
 	textarea:focus {
 		outline: none !important;
