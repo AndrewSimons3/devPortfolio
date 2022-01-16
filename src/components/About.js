@@ -26,7 +26,7 @@ const About = () => {
 				</p>
 				<br></br>
 				<p>
-					A passionate and driven individual, I pride myself on being a lifetime
+					A passionate and driven individual, I pride myself on being a lifelong
 					learner and applying my skills to produce the best results.
 				</p>
 				<Button>

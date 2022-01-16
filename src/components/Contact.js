@@ -1,9 +1,24 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
 
 const Contact = () => {
+	const nameInputRef = useRef();
+	const emailInputRef = useRef();
+	const phoneInputRef = useRef();
+	const messageInputRef = useRef();
+
+	const confirmHandler = (e) => {
+		e.preventDefault();
+
+		const enteredName = nameInputRef.current.value();
+		const enteredEmail = emailInputRef.current.value();
+		const enteredPhone = phoneInputRef.current.value();
+    const enteredMessage = messageInputRef.current.value();
+    
+    console.log(enteredName);
+	};
 	return (
-		<ContactWrapper id="Contact">
+		<ContactWrapper id='Contact'>
 			<Header>
 				<Inner>
 					<span></span>
@@ -34,18 +49,33 @@ const Contact = () => {
 					</div>
 				</Icons>
 				<FormContainer>
-					<form method='POST'>
-						<input type='text' name='name' placeholder='Full Name'></input>
+					<form onSubmit={confirmHandler}>
+						<input
+							type='text'
+							name='name'
+							placeholder='Full Name'
+							ref={nameInputRef}
+						></input>
 						<div className='row-2'>
-							<input type='text' name='email' placeholder='Phone'></input>
-							<input type='text' name='phone' placeholder='Email'></input>
+							<input
+								type='text'
+								name='email'
+								placeholder='Phone'
+								ref={phoneInputRef}
+							></input>
+							<input
+								type='text'
+								name='phone'
+								placeholder='Email'
+								ref={emailInputRef}
+							></input>
 						</div>
 						<textarea
 							name='message'
-							id
 							cols='30'
 							rows='10'
 							placeholder='Enter your message'
+							ref={messageInputRef}
 							required
 						></textarea>
 						<button>Submit</button>
@@ -101,11 +131,9 @@ const Title = styled.h3`
 
 const ContactBox = styled.div`
 	display: flex;
-  justify-content: center;
-  align-items: center;
+	justify-content: center;
+	align-items: center;
 	flex-wrap: wrap;
-
-  
 `;
 
 const Icons = styled.div`
@@ -121,7 +149,7 @@ const Icons = styled.div`
 		padding: 10px;
 		border-radius: 100px;
 		margin-right: 10px;
-    border: 2px solid #fff;
+		border: 2px solid #fff;
 		box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 	}
 
@@ -156,8 +184,6 @@ const Icons = styled.div`
 		}
 	}
 `;
-
-
 
 const FormContainer = styled.div`
 	width: 40rem;
@@ -249,9 +275,9 @@ const FormContainer = styled.div`
 		font-weight: 300;
 	}
 
-  textarea::placeholder {
-    color: #3d405b;
-  }
+	textarea::placeholder {
+		color: #3d405b;
+	}
 
 	textarea:focus {
 		outline: none !important;

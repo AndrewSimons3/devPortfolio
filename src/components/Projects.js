@@ -19,7 +19,7 @@ const Projects = () => {
 						<CardContainer>
 							<h3>Anita's Bakery</h3>
 							<p>
-								E-commerce bakery app to add baking goods to a cart and submit
+								E-commerce bakery app to add baked goods to a cart and submit
 								order to a firestore database
 							</p>
 							<div className='button-container'>

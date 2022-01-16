@@ -17,8 +17,9 @@ const Header = () => {
 					smooth={true}
 					offset={-50}
 					duration={500}
+					href='#Home'
 				>
-					<a href='#Home'>Home</a>
+					Home
 				</Link>
 				<Link
 					className='li'
@@ -28,8 +29,9 @@ const Header = () => {
 					smooth={true}
 					offset={-50}
 					duration={1000}
+					href='#About'
 				>
-					<a href='#About'>About</a>
+					About
 				</Link>
 				<Link
 					className='li'
@@ -39,8 +41,9 @@ const Header = () => {
 					smooth={true}
 					offset={-50}
 					duration={1000}
+					href='#Projects'
 				>
-					<a href='#Projects'>Portfolio</a>
+					Portfolio
 				</Link>
 				<Link
 					className='li'
@@ -50,8 +53,9 @@ const Header = () => {
 					smooth={true}
 					offset={-50}
 					duration={1000}
+					href='#Contacts'
 				>
-					<a href='#Contacts'>Contact</a>
+					Contact
 				</Link>
 				<Button>
 					<a
