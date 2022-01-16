@@ -1,0 +1,26 @@
+// Import the functions you need from the SDKs you need
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+	apiKey: 'AIzaSyAFGkzlNtbF_QRFO3sCDd5piAsGdtMb5UQ',
+	authDomain: 'devportfolio-bb8c5.firebaseapp.com',
+	databaseURL: 'https://devportfolio-bb8c5-default-rtdb.firebaseio.com',
+	projectId: 'devportfolio-bb8c5',
+	storageBucket: 'devportfolio-bb8c5.appspot.com',
+	messagingSenderId: '1031717143422',
+	appId: '1:1031717143422:web:672bee44f600a45b8fa92f',
+	measurementId: 'G-HXE72NSJGN',
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+var db = firebase.firestore();
+
+export { db }
+

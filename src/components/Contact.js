@@ -1,22 +1,40 @@
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import { db } from './firebase';
 
 const Contact = () => {
-	const nameInputRef = useRef();
-	const emailInputRef = useRef();
-	const phoneInputRef = useRef();
-	const messageInputRef = useRef();
+	const [name, setName] = useState('');
+	const [email, setEmail] = useState('');
+	const [phone, setPhone] = useState('');
+  const [message, setMessage] = useState('');
 
-	const confirmHandler = (e) => {
-		e.preventDefault();
+  const [loader, setLoader] = useState(false);
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoader(true);
 
-		const enteredName = nameInputRef.current.value();
-		const enteredEmail = emailInputRef.current.value();
-		const enteredPhone = phoneInputRef.current.value();
-    const enteredMessage = messageInputRef.current.value();
-    
-    console.log(enteredName);
-	};
+    db.collection('messages').add({
+      name: name,
+      email: email,
+      phone: phone,
+      message: message,
+    })
+      .then(() => {
+        alert('Message has been submitted 👍');
+        setLoader(false);
+      })
+      .catch(error => {
+        alert(error.message);
+        setLoader(false);
+      });
+
+    setName('');
+    setPhone('');
+    setEmail('');
+    setMessage('');
+  }
+
 	return (
 		<ContactWrapper id='Contact'>
 			<Header>
@@ -49,36 +67,40 @@ const Contact = () => {
 					</div>
 				</Icons>
 				<FormContainer>
-					<form onSubmit={confirmHandler}>
+					<form onSubmit={handleSubmit}>
 						<input
 							type='text'
 							name='name'
 							placeholder='Full Name'
-							ref={nameInputRef}
+							value={name}
+							onChange={(e) => setName(e.target.value)}
 						></input>
 						<div className='row-2'>
 							<input
 								type='text'
 								name='email'
-								placeholder='Phone'
-								ref={phoneInputRef}
+								placeholder='Email'
+								value={email}
+								onChange={(e) => setEmail(e.target.value)}
 							></input>
 							<input
 								type='text'
 								name='phone'
-								placeholder='Email'
-								ref={emailInputRef}
+								placeholder='Phone'
+								value={phone}
+								onChange={(e) => setPhone(e.target.value)}
 							></input>
 						</div>
 						<textarea
 							name='message'
 							cols='30'
 							rows='10'
-							placeholder='Enter your message'
-							ref={messageInputRef}
+              placeholder='Enter your message'
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
 							required
 						></textarea>
-						<button>Submit</button>
+						<button type='submit' style={{background : loader ? "#ccc" : ""}}>Submit</button>
 					</form>
 				</FormContainer>
 			</ContactBox>
