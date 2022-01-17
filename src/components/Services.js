@@ -124,6 +124,8 @@ const ServicesCard = styled.div`
 	margin-bottom: 2.7rem;
 	margin-right: 1rem;
 	margin-left: 1rem;
+	transition: all 0.6s ease;
+	transition-delay: 0.1s;
 
   &:hover {
     background: #333655;
