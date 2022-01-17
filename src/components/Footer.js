@@ -37,6 +37,19 @@ const Footer = () => {
 						/>
 					</a>
 				</div>
+				<div className='img-container'>
+					<a
+						href='https://github.com/AndrewSimons3'
+						target='_blank'
+						rel='noreferrer'
+					>
+						<img
+							className='github'
+							src='../images/logo-github.svg'
+							alt='twitter'
+						/>
+					</a>
+				</div>
 			</div>
 		</Container>
 	);
