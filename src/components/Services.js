@@ -57,7 +57,7 @@ const ServicesWrapper = styled.div`
 	margin-bottom: 12rem;
 
   @media (max-width: 400px) {
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
   }
 `;
 
@@ -66,6 +66,10 @@ const Header = styled.div`
 	align-items: center;
 	flex-direction: column;
 	margin-bottom: 3rem;
+
+	@media (max-width: 768px) {
+		margin-bottom: 1.4rem;
+	}
 
 	p {
 		color: #81b29a;
@@ -95,6 +99,10 @@ const Title = styled.h3`
 	margin-bottom: 1.4rem;
 	font-weight: 700;
 	font-size: 2rem;
+
+	@media (max-width: 768px) {
+		margin-bottom: 0.5rem;
+	}
 `;
 
 const ServicesCardWrapper = styled.div`

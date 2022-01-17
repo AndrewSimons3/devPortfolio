@@ -113,7 +113,11 @@ const ContactWrapper = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	margin-bottom: 20rem;
+	margin-bottom: 12rem;
+
+	@media (max-width: 768px) {
+		margin-bottom: 5rem;
+	}
 `;
 
 const Header = styled.div`
@@ -121,6 +125,10 @@ const Header = styled.div`
 	align-items: center;
 	flex-direction: column;
 	margin-bottom: 3rem;
+
+	@media (max-width: 768px) {
+		margin-bottom: 1.4rem;
+	}
 
 	p {
 		color: #81b29a;

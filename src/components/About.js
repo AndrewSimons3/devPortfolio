@@ -56,7 +56,7 @@ const AboutWrapper = styled.div`
 	}
 
 	@media (max-width: 768px) {
-		margin-bottom: 10rem;
+		margin-bottom: 5rem;
 		img {
 			height: 375px;
 			width: 300px;
