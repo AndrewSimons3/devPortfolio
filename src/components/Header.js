@@ -148,6 +148,8 @@ const Button = styled.button`
 	background-color: #81b29a;
 	cursor: pointer;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	transition: all 0.6s ease;
+	transition-delay: 0.1s;
 
 	a {
 		color: #fff;

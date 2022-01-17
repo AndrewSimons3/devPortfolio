@@ -235,8 +235,8 @@ const CardContainer = styled.div`
 
 	p {
 		margin-bottom: 1rem;
-    text-align: center;
-    font-size: 12px;
+		text-align: center;
+		font-size: 12px;
 	}
 
 	.button-container {
@@ -250,18 +250,27 @@ const CardContainer = styled.div`
 		margin: 0 0.5rem;
 		padding: 1rem 2rem;
 		border-radius: 25px;
+		transition: all 0.6s ease;
+		transition-delay: 0.1s;
+		cursor: pointer;
 	}
 
-  a {
-    text-decoration: none;
-    color: #000;
-  }
+	button:hover {
+		background-color: #f4f1deb4;
+		transition: all 0.6s ease;
+		transition-delay: 0.1s;
+	}
 
-  @media (max-width: 768px) {
-    button {
-      padding: 0.5rem 1rem;
-    }
-  }
+	a {
+		text-decoration: none;
+		color: #000;
+	}
+
+	@media (max-width: 768px) {
+		button {
+			padding: 0.5rem 1rem;
+		}
+	}
 `;
 
 const Header = styled.div`

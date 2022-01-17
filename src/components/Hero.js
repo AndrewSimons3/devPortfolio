@@ -115,6 +115,8 @@ const Button = styled.button`
 	color: #fff;
 	cursor: pointer;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	transition: all 0.6s ease;
+	transition-delay: 0.1s;
 
 	&:hover {
 		background-color: #6c9c85;

@@ -118,7 +118,7 @@ const ServicesCard = styled.div`
 	margin-left: 1rem;
 
   &:hover {
-    background: #0fb;
+    background: #333655;
     transition: all 0.4s ease-in-out;
 }
   }

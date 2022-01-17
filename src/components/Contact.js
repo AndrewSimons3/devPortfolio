@@ -198,6 +198,7 @@ const Icons = styled.div`
 
 		@media (max-width: 684px) {
 			display: flex;
+      align-items: start;
 			flex-direction: column;
 
 			.contact-info {
@@ -321,6 +322,8 @@ const FormContainer = styled.div`
 		text-align: center;
 		color: #f4f1de;
 		border: none;
+		transition: all 0.6s ease;
+		transition-delay: 0.1s;
 
 		&:hover {
 			background: #6c9c85;
