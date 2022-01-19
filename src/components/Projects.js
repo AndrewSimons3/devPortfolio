@@ -101,7 +101,7 @@ const Projects = () => {
 						</CardContainer>
 					</div>
 				</ProjectsCard>
-				<ProjectsCard>
+				{/* <ProjectsCard>
 					<div className='todo'>
 						<CardContainer>
 							<h3>Todo List</h3>
@@ -128,7 +128,7 @@ const Projects = () => {
 							</div>
 						</CardContainer>
 					</div>
-				</ProjectsCard>
+				</ProjectsCard> */}
 			</ProjectsCardWrapper>
 		</ProjectsWrapper>
 	);
