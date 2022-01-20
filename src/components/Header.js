@@ -126,16 +126,16 @@ const Nav = styled.nav`
 
 	@media (max-width: 800px) {
 		.li {
-			font-size: 12px;
+			font-size: 14px;
 		}
 
 		a {
 			width: 100px;
-			padding: 15px;
+			padding: 10px;
 		}
 	}
 
-	@media (max-width: 600px) {
+	@media (max-width: 650px) {
 		.li {
 			display: none;
 		}
@@ -184,6 +184,13 @@ const ButtonContainer = styled.button`
 	.btn:hover::after {
 		transform: scaleX(1.4) scaleY(1.6);
 		opacity: 0;
+	}
+
+	@media (max-width: 800px) {
+		.btn:link,
+		.btn:visited {
+			padding: 1rem 1rem;
+		}
 	}
 
 `;

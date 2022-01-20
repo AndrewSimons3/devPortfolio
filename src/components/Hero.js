@@ -61,7 +61,7 @@ const HeroWrapper = styled.div`
 const HeroTextWrapper = styled.div`
 	width: 55%;
 	overflow: hidden;
-	padding-bottom: 10px;
+	padding: 0 0 20px 20px;
 	animation: moveInLeft 2s ease-out;
 
 	p {
@@ -86,7 +86,7 @@ const HeroTextWrapper = styled.div`
 	}
 
 	@media (max-width: 1050px) {
-		width: 20rem;
+		width: 22rem;
 	}
 
 	@media (max-width: 850px) {
@@ -139,7 +139,7 @@ const ButtonContainer = styled.div`
 
 	.btn:hover {
 		transform: translateY(-3px);
-		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 	}
 
 	.btn:active {
@@ -165,6 +165,7 @@ const ButtonContainer = styled.div`
 	.btn:hover::after {
 		transform: scaleX(1.4) scaleY(1.6);
 		opacity: 0;
+		box-shadow: 0 1rem 0.5rem rgba(0, 0, 0, 0.2);
 	}
 `;
 
@@ -179,14 +180,9 @@ const HeroImageWrapper = styled.div`
 		border-radius: 25px;
 	}
 
-	@media (max-width: 768px) {
-		img {
-			display: none;
-		}
-	}
+	
 
-	@media (max-width: 850px) {
-	}
+	
 
 	@media (max-width: 1515px) {
 		img {
@@ -227,7 +223,7 @@ const Title = styled.h1`
 		font-size: 4.4rem;
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 850px) {
 		font-size: 3rem;
 		line-height: 1.25;
 		margin-bottom: 1rem;
