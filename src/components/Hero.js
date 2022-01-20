@@ -23,7 +23,9 @@ const Hero = () => {
 						offset={-50}
 						duration={1000}
 					>
-						<Button>Hire Me</Button>
+						<ButtonContainer>
+							<a className="btn btn--green btn--animate" href="#">Hire Me</a>
+						</ButtonContainer>
 					</Link>
 				</HeroTextWrapper>
 				<HeroImageWrapper>
@@ -60,6 +62,7 @@ const HeroTextWrapper = styled.div`
 	width: 55%;
 	overflow: hidden;
 	padding-bottom: 10px;
+	animation: moveInLeft 2s ease-out;
 
 	p {
 		text-transform: uppercase;
@@ -94,6 +97,19 @@ const HeroTextWrapper = styled.div`
 		text-align: center;
 		width: 100%;
 	}
+
+	@keyframes moveInLeft {
+		0% {
+			opacity: 0;
+			transform: translateX(-10rem);
+		}
+
+
+		100% {
+			opacity: 1;
+			transform: translate(0);
+		}
+	}
 `;
 
 const Summary = styled.div`
@@ -105,22 +121,50 @@ const Summary = styled.div`
 	margin-bottom: 1rem;
 `;
 
-const Button = styled.button`
-	width: 200px;
-	text-decoration: none;
-	padding: 20px;
-	border-radius: 50px;
+const ButtonContainer = styled.div`
+	border-radius: 100px;
 	border: none;
 	background-color: #81b29a;
-	color: #fff;
-	cursor: pointer;
-	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-	transition: all 0.6s ease;
-	transition-delay: 0.1s;
+	width: 132px;
 
-	&:hover {
-		background-color: #6c9c85;
-		transition: 0.3s ease;
+	.btn:link,
+	.btn:visited {
+		text-decoration: none;
+		color: #fff;
+		padding: 1rem 2rem;
+		display: inline-block;
+		border-radius: 100px;
+		transition: all 0.2s;
+	}
+
+	.btn:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	}
+
+	.btn:active {
+		transform: translateY(-1px);
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	}
+
+	.btn--green {
+		background-color: #81b29a;
+		color: #fff;
+	}
+
+	.btn::after {
+		content: '';
+		display: inline-block;
+		z-index: -1;
+	}
+
+	.btn--green::after {
+		background-color: #81b29a;
+	}
+
+	.btn:hover::after {
+		transform: scaleX(1.4) scaleY(1.6);
+		opacity: 0;
 	}
 `;
 
@@ -128,6 +172,7 @@ const HeroImageWrapper = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	animation: moveInBottom 2s ease-out;
 	img {
 		width: 500px;
 		height: 500px;
@@ -141,7 +186,6 @@ const HeroImageWrapper = styled.div`
 	}
 
 	@media (max-width: 850px) {
-		
 	}
 
 	@media (max-width: 1515px) {
@@ -155,6 +199,18 @@ const HeroImageWrapper = styled.div`
 		img {
 			height: 300px;
 			width: 300px;
+		}
+	}
+
+	@keyframes moveInBottom {
+		0% {
+			opacity: 0;
+			transform: translateY(3rem);
+		}
+
+		100% {
+			opacity: 1;
+			transform: translate(0);
 		}
 	}
 `;

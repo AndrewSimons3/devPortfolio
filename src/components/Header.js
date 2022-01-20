@@ -57,15 +57,16 @@ const Header = () => {
 				>
 					Contact
 				</Link>
-				<Button>
+				<ButtonContainer>
 					<a
+						className='btn btn--green btn--animated'
 						href='https://github.com/AndrewSimons3/Resume/blob/master/Andrew%20Simons%20Resume.pdf'
 						target='_blank'
 						rel='noreferrer'
 					>
 						Resume
 					</a>
-				</Button>
+				</ButtonContainer>
 			</ul>
 		</Nav>
 	);
@@ -88,7 +89,7 @@ const Nav = styled.nav`
 	display: flex;
 	align-items: center;
 	padding: 0 2rem;
-	border-radius: 100px;
+	border-radius: 10rem;
 	font-size: 18px;
 	top: 0;
 	left: 0;
@@ -102,30 +103,33 @@ const Nav = styled.nav`
 		align-items: center;
 		flex-direction: row;
 		list-style-type: none;
+		animation: moveInRight 2s ease-out;
+	}
+
+	@keyframes moveInRight {
+		0% {
+			opacity: 0;
+			transform: translateX(10rem);
+		}
+
+		100% {
+			opacity: 1;
+			transform: translate(0);
+		}
 	}
 
 	.li {
 		color: #2d2f46;
 		padding: 0 15px;
-	}
-
-	a {
 		text-decoration: none;
-		cursor: pointer;
-		color: #3d405b;
 	}
-
-	a:hover {
-		
-	}
-
 
 	@media (max-width: 800px) {
 		.li {
 			font-size: 12px;
 		}
 
-		Button {
+		a {
 			width: 100px;
 			padding: 15px;
 		}
@@ -138,27 +142,52 @@ const Nav = styled.nav`
 	}
 `;
 
-const Button = styled.button`
-	text-decoration: none;
-	padding: 20px;
-	width: 150px;
-	border-radius: 50px;
-	margin-left: 20px;
+const ButtonContainer = styled.button`
+	border-radius: 100px;
 	border: none;
 	background-color: #81b29a;
-	cursor: pointer;
-	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-	transition: all 0.6s ease;
-	transition-delay: 0.1s;
 
-	a {
+	.btn:link,
+	.btn:visited {
+		text-decoration: none;
+		color: #fff;
+		padding: 1rem 2rem;
+		display: inline-block;
+		border-radius: 100px;
+		transition: all 0.2s;
+	}
+
+	.btn:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+	}
+
+	.btn:active {
+		transform: translateY(-1px);
+		box-shadow: 0 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
+	}
+
+	.btn--green {
+		background-color: #81b29a;
 		color: #fff;
 	}
 
-	&:hover {
-		background-color: #6c9c85;
-		transition: 0.3s ease;
+	.btn::after {
+		content: '';
+		display: inline-block;
 	}
+
+	.btn--green::after {
+		background-color: #81b29a;
+	}
+
+	.btn:hover::after {
+		transform: scaleX(1.4) scaleY(1.6);
+		opacity: 0;
+	}
+
 `;
+
+
 
 export default Header;
