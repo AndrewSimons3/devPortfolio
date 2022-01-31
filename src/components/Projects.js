@@ -49,7 +49,10 @@ const Projects = () => {
 					<div className='disney'>
 						<CardContainer>
 							<h3>Disney+ Clone</h3>
-							<p>Login using google authentication with firebase to view and select Disney+ movies and tv shows built with React and Redux.</p>
+							<p>
+								Login using google authentication with firebase to view and
+								select Disney+ movies and tv shows built with React and Redux.
+							</p>
 							<div className='button-container'>
 								<button>
 									<a
@@ -77,7 +80,10 @@ const Projects = () => {
 					<div className='tesla'>
 						<CardContainer>
 							<h3>Tesla Clone</h3>
-							<p>A beautiful and elegant landing page for the one and only Tesla using React and Redux.</p>
+							<p>
+								A beautiful and elegant landing page for the one and only Tesla
+								using React and Redux.
+							</p>
 							<div className='button-container'>
 								<button>
 									<a
@@ -101,15 +107,18 @@ const Projects = () => {
 						</CardContainer>
 					</div>
 				</ProjectsCard>
-				{/* <ProjectsCard>
-					<div className='todo'>
+				<ProjectsCard>
+					<div className='pricing'>
 						<CardContainer>
-							<h3>Todo List</h3>
-							<p>Not your average todo list with several fun and unique features.</p>
+							<h3>360 Home Connect Pricing Tool</h3>
+							<p>
+								Pricing tool used by 360 Home Connect's sales consultants to
+								quote their client's tv and internet prices.
+							</p>
 							<div className='button-container'>
 								<button>
 									<a
-										href='https://reacttodolist-e24ff.web.app/'
+										href='https://price-calculator-26fca.web.app/login'
 										target='_blank'
 										rel='noreferrer'
 									>
@@ -118,7 +127,7 @@ const Projects = () => {
 								</button>
 								<button>
 									<a
-										href='https://github.com/AndrewSimons3/TodoList'
+										href='https://github.com/AndrewSimons3/pricingCalc'
 										target='_blank'
 										rel='noreferrer'
 									>
@@ -128,7 +137,7 @@ const Projects = () => {
 							</div>
 						</CardContainer>
 					</div>
-				</ProjectsCard> */}
+				</ProjectsCard>
 			</ProjectsCardWrapper>
 		</ProjectsWrapper>
 	);
@@ -203,8 +212,8 @@ const ProjectsCard = styled.div`
 		border-radius: 25px;
 	}
 
-	.todo {
-		background-image: url('../images/todo.png');
+	.pricing {
+		background-image: url('../images/pricing.png');
 		background-size: cover;
 		width: 100%;
 		height: 100%;

@@ -126,7 +126,7 @@ const Nav = styled.nav`
 
 	@media (max-width: 800px) {
 		.li {
-			font-size: 14px;
+			font-size: 16px;
 		}
 
 		a {
