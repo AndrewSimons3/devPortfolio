@@ -24,7 +24,7 @@ const Hero = () => {
 						duration={1000}
 					>
 						<ButtonContainer>
-							<a className="btn btn--green btn--animate" href="#">Hire Me</a>
+							<a className="btn btn--green btn--animated" href="#Contact">Hire Me</a>
 						</ButtonContainer>
 					</Link>
 				</HeroTextWrapper>
@@ -126,6 +126,7 @@ const ButtonContainer = styled.div`
 	border: none;
 	background-color: #81b29a;
 	width: 132px;
+	font-weight: 300;
 
 	.btn:link,
 	.btn:visited {
@@ -139,7 +140,7 @@ const ButtonContainer = styled.div`
 
 	.btn:hover {
 		transform: translateY(-3px);
-		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 	}
 
 	.btn:active {

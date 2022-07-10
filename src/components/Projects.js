@@ -107,37 +107,6 @@ const Projects = () => {
 						</CardContainer>
 					</div>
 				</ProjectsCard>
-				<ProjectsCard>
-					<div className='pricing'>
-						<CardContainer>
-							<h3>360 Home Connect Pricing Tool</h3>
-							<p>
-								Pricing tool used by 360 Home Connect's sales consultants to
-								quote their client's tv and internet prices.
-							</p>
-							<div className='button-container'>
-								<button>
-									<a
-										href='https://price-calculator-26fca.web.app/login'
-										target='_blank'
-										rel='noreferrer'
-									>
-										View App
-									</a>
-								</button>
-								<button>
-									<a
-										href='https://github.com/AndrewSimons3/pricingCalc'
-										target='_blank'
-										rel='noreferrer'
-									>
-										View Github
-									</a>
-								</button>
-							</div>
-						</CardContainer>
-					</div>
-				</ProjectsCard>
 			</ProjectsCardWrapper>
 		</ProjectsWrapper>
 	);
@@ -231,13 +200,13 @@ const CardContainer = styled.div`
 	opacity: 0;
 	border-radius: 25px;
 	padding: 20px;
-	transition: all 0.6s ease;
-	transition-delay: 0.1s;
+	transition: all 0.3s ease;
+
 
 	&:hover {
 		opacity: 0.9;
-		transition: all 0.6s ease;
-		transition-delay: 0.1s;
+		transition: all 0.3s ease;
+
 		background: #3d405b;
 		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
 	}

@@ -146,6 +146,7 @@ const ButtonContainer = styled.button`
 	border-radius: 100px;
 	border: none;
 	background-color: #81b29a;
+	font-weight: 300;
 
 	.btn:link,
 	.btn:visited {

@@ -29,15 +29,16 @@ const About = () => {
 					A passionate and driven individual, I pride myself on being a lifelong
 					learner and applying my skills to produce the best results.
 				</p>
-				<Button>
+				<ButtonContainer>
 					<a
+						className='btn btn--green btn--animated'
 						href='https://github.com/AndrewSimons3/Resume/blob/master/Andrew%20Simons%20Resume.pdf'
 						target='_blank'
 						rel='noreferrer'
 					>
 						Resume
 					</a>
-				</Button>
+				</ButtonContainer>
 			</SummaryContainer>
 		</AboutWrapper>
 	);
@@ -96,20 +97,6 @@ const SummaryContainer = styled.div`
 		font-size: 16px;
 	}
 
-	Button {
-		margin-top: auto;
-
-		a {
-			text-decoration: none;
-			color: #fff;
-		}
-
-		&:hover {
-			background-color: #6c9c85;
-			transition: 0.3s ease;
-		}
-	}
-
 	@media (max-width: 798px) {
 		display: flex;
 		justify-content: center;
@@ -149,18 +136,54 @@ const AboutTitle = styled.h3`
 	font-size: 2rem;
 `;
 
-const Button = styled.button`
-	width: 200px;
-	text-decoration: none;
-	padding: 20px;
-	border-radius: 50px;
+const ButtonContainer = styled.div`
+	border-radius: 100px;
 	border: none;
 	background-color: #81b29a;
-	color: #fff;
-	cursor: pointer;
-	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-	transition: all 0.6s ease;
-	transition-delay: 0.1s;
+	width: 132px;
+	margin: 20px 0 80px 0px;
+	font-weight: 300;
+
+	.btn:link,
+	.btn:visited {
+		text-decoration: none;
+		color: #fff;
+		padding: 1rem 2rem;
+		display: inline-block;
+		border-radius: 100px;
+		transition: all 0.2s;
+	}
+
+	.btn:hover {
+		transform: translateY(-3px);
+		box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2);
+	}
+
+	.btn:active {
+		transform: translateY(-1px);
+		box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2);
+	}
+
+	.btn--green {
+		background-color: #81b29a;
+		color: #fff;
+	}
+
+	.btn::after {
+		content: '';
+		display: inline-block;
+		z-index: -1;
+	}
+
+	.btn--green::after {
+		background-color: #81b29a;
+	}
+
+	.btn:hover::after {
+		transform: scaleX(1.4) scaleY(1.6);
+		opacity: 0;
+		box-shadow: 0 1rem 0.5rem rgba(0, 0, 0, 0.2);
+	}
 `;
 
 export default About;

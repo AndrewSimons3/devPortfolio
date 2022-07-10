@@ -6,34 +6,35 @@ const Contact = () => {
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [phone, setPhone] = useState('');
-  const [message, setMessage] = useState('');
+	const [message, setMessage] = useState('');
 
-  const [loader, setLoader] = useState(false);
-  
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoader(true);
+	const [loader, setLoader] = useState(false);
 
-    db.collection('messages').add({
-      name: name,
-      email: email,
-      phone: phone,
-      message: message,
-    })
-      .then(() => {
-        alert('Message has been submitted 👍');
-        setLoader(false);
-      })
-      .catch(error => {
-        alert(error.message);
-        setLoader(false);
-      });
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		setLoader(true);
 
-    setName('');
-    setPhone('');
-    setEmail('');
-    setMessage('');
-  }
+		db.collection('messages')
+			.add({
+				name: name,
+				email: email,
+				phone: phone,
+				message: message,
+			})
+			.then(() => {
+				alert('Message has been submitted 👍');
+				setLoader(false);
+			})
+			.catch((error) => {
+				alert(error.message);
+				setLoader(false);
+			});
+
+		setName('');
+		setPhone('');
+		setEmail('');
+		setMessage('');
+	};
 
 	return (
 		<ContactWrapper id='Contact'>
@@ -95,12 +96,21 @@ const Contact = () => {
 							name='message'
 							cols='30'
 							rows='10'
-              placeholder='Enter your message'
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
+							placeholder='Enter your message'
+							value={message}
+							onChange={(e) => setMessage(e.target.value)}
 							required
 						></textarea>
-						<button type='submit' style={{background : loader ? "#ccc" : ""}}>Submit</button>
+						<ButtonContainer>
+							<button
+								className='btn btn--green btn--animated'
+								href='#Header'
+								// target='_blank'
+								rel='noreferrer'
+							>
+								Submit
+							</button>
+						</ButtonContainer>
 					</form>
 				</FormContainer>
 			</ContactBox>
@@ -206,7 +216,7 @@ const Icons = styled.div`
 
 		@media (max-width: 684px) {
 			display: flex;
-      align-items: start;
+			align-items: start;
 			flex-direction: column;
 
 			.contact-info {
@@ -215,6 +225,59 @@ const Icons = styled.div`
 		}
 	}
 `;
+
+const ButtonContainer = styled.div`
+	border-radius: 100px;
+	border: none;
+	background-color: #81b29a;
+	display: inline-block;
+
+	.btn {
+		font-family: 'Spartan', sans-serif;
+		font-size: 16px;
+		font-weight: 300;
+		text-decoration: none;
+		color: #fff;
+		padding: 1rem 2rem;
+		display: inline-block;
+		border-radius: 100px;
+		transition: all 0.2s;
+		border: none;
+	
+	}
+
+	.btn:hover {
+		transform: translateY(-3px);
+		box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2);
+	}
+
+	.btn:active {
+		transform: translateY(-1px);
+		box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2);
+	}
+
+	.btn--green {
+		background-color: #81b29a;
+		color: #fff;
+	}
+
+	.btn::after {
+		content: '';
+		display: inline-block;
+		z-index: -1;
+	}
+
+	.btn--green::after {
+		background-color: #81b29a;
+	}
+
+	.btn:hover::after {
+		transform: scaleX(1.4) scaleY(1.6);
+		opacity: 0;
+		box-shadow: 0 1rem 0.5rem rgba(0, 0, 0, 0.2);
+	}
+`;
+
 
 const FormContainer = styled.div`
 	width: 40rem;
@@ -315,38 +378,11 @@ const FormContainer = styled.div`
 		border: 1px solid #3d405b;
 		box-shadow: 0 0 10px #3d405b;
 	}
-	button {
-		height: 3.6rem;
-		width: 14rem;
+
+	@media (max-width: 974px) {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background: #81b29a;
-		box-shadow: 0 1.6rem 1.6rem rgb(51 51 51 / 25%);
-		border-radius: 3rem;
-		font-weight: 300;
-		font-size: 1rem;
-		line-height: 1.4rem;
-		text-align: center;
-		color: #f4f1de;
-		border: none;
-		transition: all 0.6s ease;
-		transition-delay: 0.1s;
-
-		&:hover {
-			background: #6c9c85;
-			transition: 0.3s ease-in;
-		}
-
-		button:focus {
-			border: 1px solid #3d405b;
-		}
-
-		@media (max-width: 974px) {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
 	}
 `;
 
